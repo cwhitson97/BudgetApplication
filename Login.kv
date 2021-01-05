@@ -1,0 +1,56 @@
+<LoginScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Image:
+        source: 'Dandelion.jpg'
+        allow_stretch: True
+        keep_ratio: False
+    Label:
+        text: 'Living Free'
+        font_name: 'BlackJack'
+        color: 0,0,0,1
+        bold: True
+        font_size: 70
+        pos_hint: {'center_x': .78, 'center_y': .9}
+    BoxLayout:
+        orientation: 'vertical'
+        pos_hint: {'center_x': .78, 'center_y': .2}
+        size_hint_x: .4
+        size_hint_y: .28
+        spacing: 10
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'Username'
+                font_size: 17
+                halign: 'center'
+                text_size: self.size
+                color: 0,0,0,1
+                bold: True
+            TextInput:
+                id: user
+                multiline: False
+                halign: 'center'
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'Password'
+                font_size: 17
+                halign: 'center'
+                text_size: self.size
+                color: 0,0,0,1
+                bold: True
+            TextInput:
+                id: password
+                multiline: False
+                halign: 'center'
+        Button:
+            text: 'Login'
+            size_hint_x: .3
+            size_hint_y: .5
+            pos_hint: {'right': 1}
+
+
+
